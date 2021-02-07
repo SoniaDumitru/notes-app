@@ -21,6 +21,6 @@ class Api::V1::NotesController < ApplicationController
     end
   
     def find_note
-      @note = Note.find(params[:id])
+      @note = Note.find_by(title: params[:title])
     end
   end
